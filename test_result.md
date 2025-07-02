@@ -189,7 +189,7 @@ frontend:
         agent: "main"
         comment: "Added smooth transitions for piece movements, hover effects with scale and rotation, selected piece animations, and enhanced move indicators with pulsing effects"
 
-  - task: "Minimalist UI Redesign"
+  - task: "Knight Clash Branding & Old Money Aesthetic"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -199,7 +199,19 @@ frontend:
     status_history:
       - working: true
         agent: "main"
-        comment: "Redesigned entire UI to match minimalist aesthetic: moved stats to floating bottom-right button, created clean status bar with backdrop blur, modernized color scheme and spacing"
+        comment: "Integrated the sophisticated Knight Clash logo, changed title to match, implemented old money aesthetic with dark backgrounds, gold/silver accents, and elegant typography"
+
+  - task: "PWA and Mobile App Support"
+    implemented: true
+    working: true
+    file: "/app/frontend/public/manifest.json"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added complete PWA manifest, meta tags for mobile installation, Apple-specific configurations, and deployment-ready setup"
 
   - task: "Crown Reward System"
     implemented: true
