@@ -96,6 +96,31 @@
   box-shadow: 0 6px 20px rgba(68, 160, 141, 0.6);
 }
 
+.btn-stats {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  color: white;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+}
+
+.btn-stats:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6);
+}
+
+.btn-retry {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  color: white;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+  margin-top: 15px;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.btn-retry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+}
+
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
