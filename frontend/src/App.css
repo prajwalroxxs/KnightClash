@@ -467,8 +467,8 @@
 }
 
 .btn-retry-center {
-  background: linear-gradient(45deg, #e74c3c, #c0392b);
-  color: white;
+  background: linear-gradient(45deg, #b8860b, #daa520);
+  color: #1a1a1a;
   border: none;
   border-radius: 25px;
   padding: 12px 24px;
@@ -476,7 +476,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
