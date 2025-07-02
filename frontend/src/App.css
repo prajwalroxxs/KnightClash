@@ -357,8 +357,8 @@
 
 .chess-board {
   display: grid;
-  grid-template-columns: repeat(8, 70px);
-  grid-template-rows: repeat(8, 70px);
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(8, 80px);
   border: 4px solid #8b4513;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -371,7 +371,7 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   user-select: none;
 }
 
@@ -381,13 +381,57 @@
 }
 
 .chess-piece {
-  font-size: 2.5rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-  transition: all 0.2s ease;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* White and Black Piece Styling */
+.white-piece {
+  color: #ffffff;
+  text-shadow: 
+    2px 2px 0px #000000,
+    -2px -2px 0px #000000,
+    2px -2px 0px #000000,
+    -2px 2px 0px #000000,
+    3px 3px 6px rgba(0,0,0,0.8);
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.8));
+}
+
+.black-piece {
+  color: #000000;
+  text-shadow: 
+    2px 2px 0px #ffffff,
+    -2px -2px 0px #ffffff,
+    2px -2px 0px #ffffff,
+    -2px 2px 0px #ffffff,
+    3px 3px 6px rgba(255,255,255,0.6);
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.9));
 }
 
 .chess-square:hover .chess-piece {
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg);
+}
+
+.selected .chess-piece {
+  transform: scale(1.2);
+  animation: selectedPiecePulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes selectedPiecePulse {
+  from { 
+    filter: brightness(1.2);
+    transform: scale(1.2) rotate(-2deg);
+  }
+  to { 
+    filter: brightness(1.5);
+    transform: scale(1.25) rotate(2deg);
+  }
 }
 
 .selected {
