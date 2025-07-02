@@ -163,7 +163,19 @@ frontend:
     status_history:
       - working: true
         agent: "main"
-        comment: "Implemented localStorage-based statistics tracking with win/loss percentages"
+        comment: "Fixed stats bug (was showing 4333 instead of 1), implemented modal popup instead of side panel, added proper game state tracking to prevent multiple updates"
+
+  - task: "Retry Game Option"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added 'Play Again' button that appears when game ends in PvE mode, integrated with game status panel"
 
   - task: "Crown Reward System"
     implemented: true
