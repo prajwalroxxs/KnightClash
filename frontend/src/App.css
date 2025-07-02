@@ -393,9 +393,9 @@
 }
 
 .btn-retry {
-  background: linear-gradient(45deg, #f39c12, #e67e22);
-  color: white;
-  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+  background: linear-gradient(45deg, #b8860b, #daa520);
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
   margin-top: 15px;
   width: 100%;
   font-size: 1.1rem;
