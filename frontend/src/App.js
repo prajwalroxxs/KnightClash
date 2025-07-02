@@ -293,10 +293,25 @@ function App() {
     if (moveHistory.length > 0) {
       const newGame = new Chess();
       const newHistory = [...moveHistory];
-      newHistory.pop();
+      const lastMove = newHistory.pop();
       
       if (gameMode === 'pve' && newHistory.length > 0) {
-        newHistory.pop(); // Also undo AI move
+        const aiMove = newHistory.pop(); // Also undo AI move
+        // Remove AI captured piece
+        if (aiMove.captured) {
+          setCapturedPieces(prev => ({
+            ...prev,
+            white: prev.white.slice(0, -1)
+          }));
+        }
+      }
+      
+      // Remove player captured piece
+      if (lastMove && lastMove.captured) {
+        setCapturedPieces(prev => ({
+          ...prev,
+          [lastMove.color === 'w' ? 'black' : 'white']: prev[lastMove.color === 'w' ? 'black' : 'white'].slice(0, -1)
+        }));
       }
       
       newHistory.forEach(move => {
