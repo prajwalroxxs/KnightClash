@@ -200,7 +200,12 @@ function App() {
           setGame(newGame);
           setMoveHistory(prev => [...prev, move]);
           
+          // Track captured pieces for AI moves
           if (move.captured) {
+            setCapturedPieces(prev => ({
+              ...prev,
+              white: [...prev.white, move.captured]
+            }));
             playSound(330, 0.4); // Capture sound
           } else {
             playSound(220, 0.2); // Move sound
