@@ -241,7 +241,15 @@ function App() {
           setMoveHistory(prev => [...prev, move]);
           setSelectedSquare(null);
           
+          // Track captured pieces
           if (move.captured) {
+            setCapturedPieces(prev => ({
+              ...prev,
+              [move.color === 'w' ? 'black' : 'white']: [
+                ...prev[move.color === 'w' ? 'black' : 'white'],
+                move.captured
+              ]
+            }));
             playSound(330, 0.4); // Capture sound
           } else {
             playSound(220, 0.2); // Move sound
