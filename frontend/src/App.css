@@ -457,6 +457,12 @@
   .action-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+  }
+  
+  .stats-modal {
+    margin: 20px;
+    min-width: auto;
   }
 }
 
@@ -468,5 +474,14 @@
   
   .chess-piece {
     font-size: 1.5rem;
+  }
+  
+  .action-buttons {
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    margin: 5px 0;
   }
 }
