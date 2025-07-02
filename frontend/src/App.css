@@ -435,13 +435,20 @@
 }
 
 .selected {
-  box-shadow: inset 0 0 0 3px #f39c12;
-  animation: selectedPulse 1s ease-in-out infinite alternate;
+  box-shadow: inset 0 0 0 4px #f39c12;
+  animation: selectedSquarePulse 1s ease-in-out infinite alternate;
+  background: radial-gradient(circle, rgba(243, 156, 18, 0.3) 0%, rgba(243, 156, 18, 0.1) 100%) !important;
 }
 
-@keyframes selectedPulse {
-  from { box-shadow: inset 0 0 0 3px #f39c12; }
-  to { box-shadow: inset 0 0 0 3px #e67e22; }
+@keyframes selectedSquarePulse {
+  from { 
+    box-shadow: inset 0 0 0 4px #f39c12;
+    transform: scale(1);
+  }
+  to { 
+    box-shadow: inset 0 0 0 4px #e67e22;
+    transform: scale(1.02);
+  }
 }
 
 .possible-move {
