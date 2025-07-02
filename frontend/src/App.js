@@ -472,27 +472,22 @@ function App() {
         </div>
 
         <div className="game-center">
-          <div className="game-info">
-            <div className="status-panel">
-              <h3>Game Status</h3>
-              <p className="game-status">{gameStatus}</p>
-              {aiThinking && <p className="ai-thinking">🤖 AI is thinking...</p>}
-              
-              {/* Retry Button */}
-              {showRetry && gameMode === 'pve' && (
-                <button 
-                  onClick={startNewGame} 
-                  className="btn btn-retry"
-                >
-                  🔄 Play Again
-                </button>
-              )}
-            </div>
-          </div>
-          
           <div className="board-container">
             {renderBoard()}
           </div>
+          
+          {/* Minimalist Game Status */}
+          <div className="status-bar">
+            <div className="status-text">{gameStatus}</div>
+            {aiThinking && <div className="ai-indicator">🤖 AI thinking...</div>}
+          </div>
+          
+          {/* Retry Button - Only show when game ends */}
+          {showRetry && gameMode === 'pve' && (
+            <button onClick={startNewGame} className="btn btn-retry-center">
+              🔄 Play Again
+            </button>
+          )}
         </div>
 
         <div className="captured-pieces right">
@@ -506,6 +501,15 @@ function App() {
           </div>
         </div>
       </div>
+      
+      {/* Stats Button - Bottom Right Corner */}
+      <button 
+        onClick={() => setShowStats(true)} 
+        className="stats-button-corner"
+        title="View Statistics"
+      >
+        📊
+      </button>
     </div>
   );
 }
