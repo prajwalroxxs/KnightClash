@@ -460,26 +460,50 @@ function App() {
       </div>
 
       <div className="game-container">
-        <div className="game-info">
-          <div className="status-panel">
-            <h3>Game Status</h3>
-            <p className="game-status">{gameStatus}</p>
-            {aiThinking && <p className="ai-thinking">🤖 AI is thinking...</p>}
-            
-            {/* Retry Button */}
-            {showRetry && gameMode === 'pve' && (
-              <button 
-                onClick={startNewGame} 
-                className="btn btn-retry"
-              >
-                🔄 Play Again
-              </button>
-            )}
+        <div className="captured-pieces left">
+          <h4>Captured Black</h4>
+          <div className="captured-grid">
+            {capturedPieces.black.map((piece, index) => (
+              <div key={index} className="captured-piece black-piece">
+                {PIECES[piece.toUpperCase()]}
+              </div>
+            ))}
           </div>
         </div>
-        
-        <div className="board-container">
-          {renderBoard()}
+
+        <div className="game-center">
+          <div className="game-info">
+            <div className="status-panel">
+              <h3>Game Status</h3>
+              <p className="game-status">{gameStatus}</p>
+              {aiThinking && <p className="ai-thinking">🤖 AI is thinking...</p>}
+              
+              {/* Retry Button */}
+              {showRetry && gameMode === 'pve' && (
+                <button 
+                  onClick={startNewGame} 
+                  className="btn btn-retry"
+                >
+                  🔄 Play Again
+                </button>
+              )}
+            </div>
+          </div>
+          
+          <div className="board-container">
+            {renderBoard()}
+          </div>
+        </div>
+
+        <div className="captured-pieces right">
+          <h4>Captured White</h4>
+          <div className="captured-grid">
+            {capturedPieces.white.map((piece, index) => (
+              <div key={index} className="captured-piece white-piece">
+                {PIECES[piece.toUpperCase()]}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
