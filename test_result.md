@@ -189,7 +189,7 @@ frontend:
         agent: "main"
         comment: "Added smooth transitions for piece movements, hover effects with scale and rotation, selected piece animations, and enhanced move indicators with pulsing effects"
 
-  - task: "Captured Pieces Display"
+  - task: "Minimalist UI Redesign"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -199,7 +199,7 @@ frontend:
     status_history:
       - working: true
         agent: "main"
-        comment: "Added side panels to display captured pieces - white pieces on right, black pieces on left, with sliding animations when pieces are captured, proper tracking through move history"
+        comment: "Redesigned entire UI to match minimalist aesthetic: moved stats to floating bottom-right button, created clean status bar with backdrop blur, modernized color scheme and spacing"
 
   - task: "Crown Reward System"
     implemented: true
