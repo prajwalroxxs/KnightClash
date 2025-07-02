@@ -132,9 +132,70 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
+  gap: 30px;
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.game-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Captured Pieces */
+.captured-pieces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.captured-pieces h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  text-align: center;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.captured-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  max-width: 100px;
+}
+
+.captured-piece {
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  animation: capturedPieceSlide 0.5s ease-out;
+}
+
+@keyframes capturedPieceSlide {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 /* Game Info Panel */
