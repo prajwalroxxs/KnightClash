@@ -493,13 +493,13 @@
   right: 30px;
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  background: linear-gradient(45deg, #cd853f, #daa520);
   border: none;
   border-radius: 50%;
   font-size: 1.5rem;
-  color: white;
+  color: #1a1a1a;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
+  box-shadow: 0 6px 20px rgba(205, 133, 63, 0.4);
   transition: all 0.3s ease;
   z-index: 100;
   display: flex;
@@ -509,7 +509,7 @@
 
 .stats-button-corner:hover {
   transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(155, 89, 182, 0.6);
+  box-shadow: 0 8px 25px rgba(205, 133, 63, 0.6);
 }
 
 .stats-button-corner:active {
