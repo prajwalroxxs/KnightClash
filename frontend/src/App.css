@@ -308,27 +308,32 @@
 }
 
 .control-group label {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(212, 175, 55, 0.9);
   font-weight: 600;
   font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .control-group select {
   padding: 10px 15px;
   border: none;
   border-radius: 25px;
-  background: rgba(255,255,255,0.95);
+  background: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(10px);
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  color: #c0c0c0;
+  border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .control-group select:hover {
-  background: rgba(255,255,255,1);
+  background: rgba(26, 26, 26, 1);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  border-color: rgba(212, 175, 55, 0.6);
 }
 
 .action-buttons {
