@@ -645,7 +645,7 @@
   }
   
   .game-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .game-container {
@@ -662,6 +662,8 @@
     min-width: auto;
     width: 100%;
     max-width: 400px;
+    max-height: 120px;
+    padding: 15px;
   }
   
   .captured-pieces.left {
@@ -675,11 +677,6 @@
   .captured-grid {
     max-width: none;
     justify-content: center;
-  }
-  
-  .game-info {
-    width: 100%;
-    max-width: 400px;
   }
   
   .chess-board {
@@ -706,16 +703,33 @@
     margin: 20px;
     min-width: auto;
   }
+  
+  .stats-button-corner {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .status-bar {
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  
+  .status-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .chess-board {
-    grid-template-columns: repeat(8, 40px);
-    grid-template-rows: repeat(8, 40px);
+    grid-template-columns: repeat(8, 42px);
+    grid-template-rows: repeat(8, 42px);
   }
   
   .chess-piece {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .captured-piece {
@@ -734,6 +748,18 @@
   }
   
   .captured-pieces h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .stats-button-corner {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .game-title {
+    font-size: 1.8rem;
   }
 }
