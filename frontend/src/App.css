@@ -382,9 +382,9 @@
 }
 
 .btn-stats {
-  background: linear-gradient(45deg, #9b59b6, #8e44ad);
-  color: white;
-  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+  background: linear-gradient(45deg, #cd853f, #daa520);
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(205, 133, 63, 0.4);
 }
 
 .btn-stats:hover {
