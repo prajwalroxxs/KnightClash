@@ -431,15 +431,15 @@
 
 /* Minimalist Status Bar */
 .status-bar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(15px);
   border-radius: 25px;
   padding: 12px 24px;
   display: flex;
   align-items: center;
   gap: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   min-height: 45px;
   justify-content: center;
 }
@@ -447,13 +447,15 @@
 .status-text {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #d4af37;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .ai-indicator {
   font-size: 0.95rem;
-  color: #9b59b6;
+  color: #daa520;
   font-weight: 500;
   animation: aiPulse 1.5s ease-in-out infinite;
   display: flex;
