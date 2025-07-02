@@ -222,4 +222,4 @@ test_plan:
 
 agent_communication:
   - agent: "main"
-    message: "Successfully implemented complete chess game with all requested features. Ready for comprehensive testing of chess gameplay, AI functionality, themes, sound effects, statistics, and mobile responsiveness."
+    message: "Successfully implemented complete chess game with all requested features. Fixed major bugs: 1) Removed stats panel and made it a clickable modal 2) Fixed statistics bug that was showing incorrect win counts 3) Added retry option for AI games. Ready for comprehensive testing."
