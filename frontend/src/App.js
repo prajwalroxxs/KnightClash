@@ -270,6 +270,7 @@ function App() {
     setGame(new Chess());
     setSelectedSquare(null);
     setMoveHistory([]);
+    setCapturedPieces({ white: [], black: [] });
     setGameStatus("White's turn");
     setShowCrown(false);
   };
