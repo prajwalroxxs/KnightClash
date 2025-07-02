@@ -865,7 +865,7 @@
 
 /* Board Themes */
 .theme-wood .light {
-  background: linear-gradient(45deg, #f5deb3, #deb887);
+  background: linear-gradient(45deg, #deb887, #d2b48c);
 }
 
 .theme-wood .dark {
@@ -873,7 +873,7 @@
 }
 
 .theme-marble .light {
-  background: linear-gradient(45deg, #f8f8ff, #e6e6fa);
+  background: linear-gradient(45deg, #f5f5dc, #e6e6e6);
 }
 
 .theme-marble .dark {
@@ -881,11 +881,11 @@
 }
 
 .theme-digital .light {
-  background: linear-gradient(45deg, #00ff7f, #00fa9a);
+  background: linear-gradient(45deg, #ffd700, #daa520);
 }
 
 .theme-digital .dark {
-  background: linear-gradient(45deg, #006400, #228b22);
+  background: linear-gradient(45deg, #b8860b, #8b6914);
 }
 
 /* Crown Celebration */
