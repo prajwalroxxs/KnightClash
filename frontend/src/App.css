@@ -557,18 +557,41 @@
     gap: 20px;
   }
   
+  .game-center {
+    order: 1;
+  }
+  
+  .captured-pieces {
+    min-width: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .captured-pieces.left {
+    order: 0;
+  }
+  
+  .captured-pieces.right {
+    order: 2;
+  }
+  
+  .captured-grid {
+    max-width: none;
+    justify-content: center;
+  }
+  
   .game-info {
     width: 100%;
     max-width: 400px;
   }
   
   .chess-board {
-    grid-template-columns: repeat(8, 45px);
-    grid-template-rows: repeat(8, 45px);
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
   }
   
   .chess-piece {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   
   .game-controls {
@@ -595,7 +618,13 @@
   }
   
   .chess-piece {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .captured-piece {
+    font-size: 1.2rem;
+    width: 25px;
+    height: 25px;
   }
   
   .action-buttons {
@@ -605,5 +634,9 @@
   .btn {
     width: 100%;
     margin: 5px 0;
+  }
+  
+  .captured-pieces h4 {
+    font-size: 1rem;
   }
 }
