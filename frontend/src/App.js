@@ -118,6 +118,9 @@ function App() {
   const [moveHistory, setMoveHistory] = useState([]);
   const [aiThinking, setAiThinking] = useState(false);
   const [showCrown, setShowCrown] = useState(false);
+  const [showStats, setShowStats] = useState(false);
+  const [showRetry, setShowRetry] = useState(false);
+  const gameEndedRef = useRef(false);
   
   // Stats from localStorage
   const [stats, setStats] = useState(() => {
@@ -125,39 +128,63 @@ function App() {
     return saved ? JSON.parse(saved) : { wins: 0, losses: 0, draws: 0 };
   });
 
+  // Update stats function
+  const updateStats = (result) => {
+    setStats(prevStats => {
+      const newStats = { ...prevStats };
+      if (result === 'win') {
+        newStats.wins++;
+      } else if (result === 'loss') {
+        newStats.losses++;
+      } else if (result === 'draw') {
+        newStats.draws++;
+      }
+      localStorage.setItem('chessStats', JSON.stringify(newStats));
+      return newStats;
+    });
+  };
+
   // Update game status
   useEffect(() => {
-    if (game.isCheckmate()) {
+    // Reset game ended flag when game starts
+    if (moveHistory.length === 0) {
+      gameEndedRef.current = false;
+      setShowRetry(false);
+    }
+
+    if (game.isCheckmate() && !gameEndedRef.current) {
+      gameEndedRef.current = true;
       const winner = game.turn() === 'w' ? 'Black' : 'White';
       setGameStatus(`Checkmate! ${winner} wins!`);
       setShowCrown(true);
+      setShowRetry(true);
       playSound(523, 0.8); // Victory sound
       
-      // Update stats
+      // Update stats for PvE mode
       if (gameMode === 'pve') {
-        const newStats = { ...stats };
-        if ((winner === 'White' && game.turn() === 'b') || (winner === 'Black' && game.turn() === 'w')) {
-          newStats.wins++;
+        // Player is always white, AI is black
+        if (winner === 'White') {
+          updateStats('win');
         } else {
-          newStats.losses++;
+          updateStats('loss');
         }
-        setStats(newStats);
-        localStorage.setItem('chessStats', JSON.stringify(newStats));
       }
       
       setTimeout(() => setShowCrown(false), 3000);
-    } else if (game.isDraw()) {
+    } else if (game.isDraw() && !gameEndedRef.current) {
+      gameEndedRef.current = true;
       setGameStatus('Draw!');
-      const newStats = { ...stats, draws: stats.draws + 1 };
-      setStats(newStats);
-      localStorage.setItem('chessStats', JSON.stringify(newStats));
+      setShowRetry(true);
+      if (gameMode === 'pve') {
+        updateStats('draw');
+      }
     } else if (game.isCheck()) {
       setGameStatus('Check!');
       playSound(440, 0.3);
-    } else {
+    } else if (!game.isGameOver()) {
       setGameStatus(`${game.turn() === 'w' ? 'White' : 'Black'}'s turn`);
     }
-  }, [game, gameMode, stats]);
+  }, [game, gameMode, moveHistory.length]);
 
   // AI Move Handler
   const makeAIMove = useCallback(async () => {
