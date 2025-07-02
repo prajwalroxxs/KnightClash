@@ -483,7 +483,7 @@
 
 .btn-retry-center:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.6);
 }
 
 /* Stats Button - Bottom Right Corner */
