@@ -434,7 +434,7 @@ function App() {
             <div className="brand-text">KNIGHT CLASH</div>
           </div>
           
-          <h1 className="game-title">♔ Chess Master ♛</h1>
+          <h1 className="game-title">KNIGHT CLASH</h1>
         </div>
         
         <div className="game-controls">
