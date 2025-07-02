@@ -345,8 +345,8 @@ function App() {
                 onClick={() => handleSquareClick(square)}
               >
                 {piece && (
-                  <div className="chess-piece">
-                    {PIECES[piece.type.toUpperCase()] || PIECES[piece.type.toLowerCase()]}
+                  <div className={`chess-piece ${piece.color === 'w' ? 'white-piece' : 'black-piece'}`}>
+                    {PIECES[piece.type.toUpperCase()]}
                   </div>
                 )}
                 {isPossibleMove && <div className="move-indicator" />}
