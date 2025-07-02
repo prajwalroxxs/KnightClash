@@ -67,37 +67,38 @@
 }
 
 .btn {
-  padding: 12px 24px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  background: linear-gradient(45deg, #3498db, #2980b9);
   color: white;
-  box-shadow: 0 4px 15px rgba(238, 90, 82, 0.4);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(238, 90, 82, 0.6);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
 }
 
 .btn-secondary {
-  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+  background: linear-gradient(45deg, #95a5a6, #7f8c8d);
   color: white;
-  box-shadow: 0 4px 15px rgba(68, 160, 141, 0.4);
+  box-shadow: 0 4px 15px rgba(149, 165, 166, 0.4);
 }
 
 .btn-secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(68, 160, 141, 0.6);
+  box-shadow: 0 6px 20px rgba(149, 165, 166, 0.6);
 }
 
 .btn-stats {
