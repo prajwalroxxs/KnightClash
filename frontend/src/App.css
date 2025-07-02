@@ -403,7 +403,7 @@
 
 .btn-retry:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.6);
 }
 
 .btn:disabled {
