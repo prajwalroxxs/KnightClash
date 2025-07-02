@@ -1,11 +1,11 @@
 {
-  "name": "Knight Clash - Chess Master",
+  "name": "Knight Clash - Tactical Chess Master",
   "short_name": "Knight Clash",
-  "description": "A sophisticated chess game with AI opponents and multiple difficulty levels",
+  "description": "A sophisticated tactical chess game with AI opponents, multiple difficulty levels, and elegant old money aesthetic",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2c3e50",
-  "theme_color": "#556b2f",
+  "background_color": "#1a1a1a",
+  "theme_color": "#d4af37",
   "orientation": "any",
   "categories": ["games", "board", "strategy"],
   "icons": [
@@ -37,10 +37,12 @@
     }
   ],
   "features": [
-    "Cross-platform chess gameplay",
-    "AI opponents with multiple difficulty levels",
+    "Tactical chess gameplay with sophisticated AI",
+    "Multiple difficulty levels (Easy, Medium, Hard)",
     "Offline play capability",
-    "Statistics tracking",
-    "Multiple board themes"
+    "Statistics tracking with win/loss percentages",
+    "Multiple elegant board themes",
+    "Smooth animations and sound effects",
+    "Cross-platform mobile and desktop support"
   ]
 }
