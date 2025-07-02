@@ -341,6 +341,44 @@ function App() {
         </div>
       )}
       
+      {/* Stats Modal */}
+      {showStats && (
+        <div className="modal-overlay" onClick={() => setShowStats(false)}>
+          <div className="stats-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>📊 Game Statistics</h3>
+              <button className="close-btn" onClick={() => setShowStats(false)}>×</button>
+            </div>
+            <div className="stats-grid">
+              <div className="stat-item">
+                <span className="stat-label">Wins:</span>
+                <span className="stat-value">{stats.wins}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">Losses:</span>
+                <span className="stat-value">{stats.losses}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">Draws:</span>
+                <span className="stat-value">{stats.draws}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">Win %:</span>
+                <span className="stat-value">{winPercentage}%</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">Loss %:</span>
+                <span className="stat-value">{lossPercentage}%</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">Total Games:</span>
+                <span className="stat-value">{totalGames}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div className="game-header">
         <h1 className="game-title">♔ Chess Master ♛</h1>
         
@@ -387,6 +425,7 @@ function App() {
         <div className="action-buttons">
           <button onClick={startNewGame} className="btn btn-primary">New Game</button>
           <button onClick={undoMove} className="btn btn-secondary" disabled={moveHistory.length === 0}>Undo Move</button>
+          <button onClick={() => setShowStats(true)} className="btn btn-stats">📊 Stats</button>
         </div>
       </div>
 
@@ -396,32 +435,16 @@ function App() {
             <h3>Game Status</h3>
             <p className="game-status">{gameStatus}</p>
             {aiThinking && <p className="ai-thinking">🤖 AI is thinking...</p>}
-          </div>
-          
-          <div className="stats-panel">
-            <h3>Statistics</h3>
-            <div className="stats-grid">
-              <div className="stat-item">
-                <span className="stat-label">Wins:</span>
-                <span className="stat-value">{stats.wins}</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-label">Losses:</span>
-                <span className="stat-value">{stats.losses}</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-label">Draws:</span>
-                <span className="stat-value">{stats.draws}</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-label">Win %:</span>
-                <span className="stat-value">{winPercentage}%</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-label">Loss %:</span>
-                <span className="stat-value">{lossPercentage}%</span>
-              </div>
-            </div>
+            
+            {/* Retry Button */}
+            {showRetry && gameMode === 'pve' && (
+              <button 
+                onClick={startNewGame} 
+                className="btn btn-retry"
+              >
+                🔄 Play Again
+              </button>
+            )}
           </div>
         </div>
         
