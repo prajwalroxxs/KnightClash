@@ -120,6 +120,7 @@ function App() {
   const [showCrown, setShowCrown] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showRetry, setShowRetry] = useState(false);
+  const [capturedPieces, setCapturedPieces] = useState({ white: [], black: [] });
   const gameEndedRef = useRef(false);
   
   // Stats from localStorage
