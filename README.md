@@ -1,15 +1,18 @@
 # ♞ KnightClash
 
-**KnightClash** is a lightweight web application that helps visualize all possible moves a knight can make from any given position on a standard 8×8 chessboard. Ideal for chess enthusiasts, learners, and developers interested in chess-based logic and frontend interactivity.
+**KnightClash** is a fully interactive, browser-based chess game built on an 8×8 board with support for both **Player vs Player** and **Player vs AI** gameplay. It highlights valid moves, enforces official chess rules, and allows players to enjoy a full offline chess experience with smooth logic and visual interactivity.
 
 ---
 
 ## 🚀 Features
 
-- 📍 Select any knight's starting position.
-- 🎯 Highlights all valid knight moves.
-- 🧠 Great for learning how knights move in chess.
-- 💡 Built using modern web tools (likely HTML, CSS, JS/Vue/React - based on your stack).
+- ♟️ **Complete Chessboard** – Standard 8×8 board layout
+- 🧠 **Player vs AI** – Smart AI opponent with move logic
+- 🎮 **Player vs Player** – Play locally with a friend
+- ✨ **Move Highlights** – Valid moves visually indicated
+- 🔁 **Turn-based Logic** – Enforces alternating turns and rule-based movement
+- 📦 **Offline Play** – No server or internet required
+- ⚡ **Quick Setup** – Simple install and run via npm
 
 npm install
 npm run dev
