@@ -410,7 +410,32 @@ function App() {
       )}
       
       <div className="game-header">
-        <h1 className="game-title">♔ Chess Master ♛</h1>
+        <div className="header-top">
+          <div className="logo">
+            <div className="luxury-accent"></div>
+            <div className="tech-pattern"></div>
+            
+            <div className="energy-rings"></div>
+            <div className="energy-rings"></div>
+            
+            <div className="tactical-lines line-1"></div>
+            <div className="tactical-lines line-2"></div>
+            <div className="tactical-lines line-3"></div>
+            <div className="tactical-lines line-4"></div>
+            
+            <div className="corner-indicators indicator-1"></div>
+            <div className="corner-indicators indicator-2"></div>
+            <div className="corner-indicators indicator-3"></div>
+            <div className="corner-indicators indicator-4"></div>
+            
+            <div className="power-level"></div>
+            
+            <div className="knight-horse">♞</div>
+            <div className="brand-text">KNIGHT CLASH</div>
+          </div>
+          
+          <h1 className="game-title">♔ Chess Master ♛</h1>
+        </div>
         
         <div className="game-controls">
           <div className="control-group">
