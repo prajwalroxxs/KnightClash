@@ -165,17 +165,41 @@ frontend:
         agent: "main"
         comment: "Fixed stats bug (was showing 4333 instead of 1), implemented modal popup instead of side panel, added proper game state tracking to prevent multiple updates"
 
-  - task: "Retry Game Option"
+  - task: "Enhanced Chess Pieces Visibility"
     implemented: true
     working: true
-    file: "/app/frontend/src/App.js"
+    file: "/app/frontend/src/App.css"
     stuck_count: 0
-    priority: "medium"
+    priority: "high"
     needs_retesting: true
     status_history:
       - working: true
         agent: "main"
-        comment: "Added 'Play Again' button that appears when game ends in PvE mode, integrated with game status panel"
+        comment: "Made chess pieces larger (3.5rem), added clear black/white distinction with contrasting text shadows and outlines, white pieces have black outlines, black pieces have white outlines"
+
+  - task: "Smooth Movement Animations"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added smooth transitions for piece movements, hover effects with scale and rotation, selected piece animations, and enhanced move indicators with pulsing effects"
+
+  - task: "Captured Pieces Display"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added side panels to display captured pieces - white pieces on right, black pieces on left, with sliding animations when pieces are captured, proper tracking through move history"
 
   - task: "Crown Reward System"
     implemented: true
