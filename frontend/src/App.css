@@ -818,25 +818,25 @@
 }
 
 .selected {
-  box-shadow: inset 0 0 0 4px #f39c12;
+  box-shadow: inset 0 0 0 4px #d4af37;
   animation: selectedSquarePulse 1s ease-in-out infinite alternate;
-  background: radial-gradient(circle, rgba(243, 156, 18, 0.3) 0%, rgba(243, 156, 18, 0.1) 100%) !important;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.1) 100%) !important;
 }
 
 @keyframes selectedSquarePulse {
   from { 
-    box-shadow: inset 0 0 0 4px #f39c12;
+    box-shadow: inset 0 0 0 4px #d4af37;
     transform: scale(1);
   }
   to { 
-    box-shadow: inset 0 0 0 4px #e67e22;
+    box-shadow: inset 0 0 0 4px #ffd700;
     transform: scale(1.02);
   }
 }
 
 .possible-move {
-  background: radial-gradient(circle, rgba(52, 152, 219, 0.4) 0%, rgba(52, 152, 219, 0.1) 100%) !important;
-  box-shadow: inset 0 0 0 2px rgba(52, 152, 219, 0.6);
+  background: radial-gradient(circle, rgba(218, 165, 32, 0.4) 0%, rgba(218, 165, 32, 0.1) 100%) !important;
+  box-shadow: inset 0 0 0 2px rgba(218, 165, 32, 0.6);
 }
 
 .move-indicator {
@@ -844,22 +844,22 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #3498db, #2980b9);
+  background: linear-gradient(45deg, #daa520, #b8860b);
   opacity: 0.8;
   animation: moveIndicatorPulse 1.5s ease-in-out infinite alternate;
-  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+  box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
 }
 
 @keyframes moveIndicatorPulse {
   from { 
     transform: scale(0.8); 
     opacity: 0.6;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 5px rgba(218, 165, 32, 0.3);
   }
   to { 
     transform: scale(1.2); 
     opacity: 1;
-    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.8);
   }
 }
 
