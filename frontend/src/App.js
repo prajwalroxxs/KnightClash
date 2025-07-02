@@ -455,7 +455,6 @@ function App() {
         <div className="action-buttons">
           <button onClick={startNewGame} className="btn btn-primary">New Game</button>
           <button onClick={undoMove} className="btn btn-secondary" disabled={moveHistory.length === 0}>Undo Move</button>
-          <button onClick={() => setShowStats(true)} className="btn btn-stats">📊 Stats</button>
         </div>
       </div>
 
